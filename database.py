@@ -1,5 +1,7 @@
 import pymysql.cursors
 
+userInput = input("Enter a student's first name: ")
+
 # Connect to the database
 connection = pymysql.connect(host='mrbartucz.com',
                              user='sq8822nj',
@@ -11,7 +13,7 @@ connection = pymysql.connect(host='mrbartucz.com',
 try:
     with connection.cursor() as cursor:
         # Select all Students
-        sql = "SELECT * from Students"
+        sql = "SELECT * from Students WHERE First_Name = \"" + userInput + "\""
         
         # execute the SQL command
         cursor.execute(sql)
