@@ -2,9 +2,9 @@ import pymysql.cursors
 
 # Connect to the database
 connection = pymysql.connect(host='mrbartucz.com',
-                             user='CS485',
-                             password='WinonaState',
-                             db='CS485',
+                             user='sq8822nj',
+                             password='Whyskar|3301',
+                             db='sq8822nj_Assignment_Two',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
@@ -21,9 +21,7 @@ try:
             print (result)
         
       
-        # If you INSERT, UPDATE or CREATE, the connection is not autocommit by default.
-        # So you must commit to save your changes. 
-        # connection.commit()
+        # to save - connection.commit()
         
 
 finally:
